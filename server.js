@@ -11,7 +11,7 @@ const appointment = require('./routes/api/appointment');
 const app = express();
 const cors=require("cors")
 
-app.use(cors({origin: 'http://localhost:3000',credentials:true}));
+app.use(cors());
 
 // DB config
 const db = require('./config/keys').mongoURI;

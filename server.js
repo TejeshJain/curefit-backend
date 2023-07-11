@@ -7,7 +7,11 @@ const authsUser = require('./routes/api/authUser');
 const profile = require('./routes/api/profile');
 const appointment = require('./routes/api/appointment');
 
+
 const app = express();
+const cors=require("cors")
+
+app.use(cors({origin: 'http://localhost:3000',credentials:true}));
 
 // DB config
 const db = require('./config/keys').mongoURI;
